@@ -5,6 +5,14 @@
     <title>Home3</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
+    # 머리말은 Jekyll 에게 Liquid 를 처리하라고 지시합니다
+    <h1>{{ "Hello World!" | downcase }}</h1>
+    {{ page.title }}
+    {% if page.show_sidebar %}
+  <div class="sidebar">
+    sidebar content
+  </div>
+{% endif %}
+{{ "hi" | capitalize }}
   </body>
 </html>
